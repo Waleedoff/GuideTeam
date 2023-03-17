@@ -10,146 +10,88 @@ class OnBoardingPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-    var body1 = Container(
-      child: Column(children: [
-        // Image.assets("assets/saving.jpg"),
-        Image.asset(
-          'assets/images/saving.jpg',
-        ),
-        Text(
-          'مرحبا',
-          style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 38.0),
-          child: Container(
-            width: 260,
-            child: Directionality(
-              textDirection: TextDirection.rtl,
-              child: Text(
-                'التطبيق الذي سوف يساعدك على ادارة شؤونك المالية',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
-              ),
-            ),
-          ),
-        )
-      ]),
-      // width: 620,
-      // height: 50,
-    );
-
     var title1 = Padding(
-      padding: const EdgeInsets.all(58.0),
-      child: Container(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 66),
-          child: Text(
-            'RISEUP',
-            style: TextStyle(
-                height: 0.2,
-                fontSize: 40,
-                color: Color(0xff4C7360),
-                fontWeight: FontWeight.w600),
+        padding: const EdgeInsets.all(58.0),
+        child: Container(
+          child: Padding(
+            padding: const EdgeInsets.only(top: 66),
+            // child: Image. asset('assets/images/page1.png')),
           ),
-        ),
-      ),
-    );
+        ));
 
     //********* PAGE 2
     var body2 = Container(
-      child: Column(children: [
-        // Image.assets("assets/saving.jpg"),
-        Image.asset(
-          'assets/images/saving.jpg',
-        ),
-        Text(
-          'ادخر',
-          style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 66),
-          child: Container(
-            // width: 48,
-            child: Text(
-              'وفر اموالك بشكل فعال دون قلق',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
-            ),
+      child: Padding(
+        padding: const EdgeInsets.only(right: 40.0),
+        child: Column(children: [
+          Image.asset(
+            'assets/images/page1.png',
           ),
-        )
-      ]),
-      // width: 620,
-      // height: 50,
+          Padding(
+            padding: const EdgeInsets.only(top: 38.0, left: 49),
+            child: Container(
+              // width: 48,
+              child: Text(
+                'أهلا أنا مساعد ',
+                style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w400,
+                    color: Color.fromRGBO(1, 89, 39, 1)),
+              ),
+            ),
+          )
+        ]),
+      ),
     );
 
-    var title2 = Padding(
-      padding: const EdgeInsets.all(58.0),
-      child: Container(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 66),
-          child: Text(
-            'RISEUP',
-            style: TextStyle(
-                height: 0.2,
-                fontSize: 40,
-                color: Color(0xff4C7360),
-                fontWeight: FontWeight.w600),
-          ),
-        ),
-      ),
+    var title2 = Container(
+      child: Padding(
+          padding: const EdgeInsets.only(top: 6, left: 220),
+          child: Image.asset('assets/images/headerSplash.png')),
     );
 
     //********* PAGE 2
     var body3 = Container(
-      child: Column(children: [
-        Image.asset(
-          'assets/images/findOut.png',
-        ),
-        Text(
-          'اكتشف',
-          style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 38.0),
-          child: Container(
-            // width: 48,
-            child: Text(
-              'آكتشف الفئات الاكثر انفاقا',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
-            ),
+      child: Padding(
+        padding: const EdgeInsets.only(right: 40.0),
+        child: Column(children: [
+          Image.asset(
+            'assets/images/page1.png',
           ),
-        )
-      ]),
-      // width: 620,
-      // height: 50,
+          Padding(
+            padding: const EdgeInsets.only(top: 38.0, left: 49),
+            child: Container(
+              // width: 48,
+
+              child: Text(
+                textAlign: TextAlign.end,
+                'كل أجوبتك المختصه في الجهات الحكوميه ماراح تحصلها عندي',
+                style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w400,
+                    color: Color.fromRGBO(1, 89, 39, 1)),
+              ),
+            ),
+          )
+        ]),
+      ),
     );
 
-    var title3 = Padding(
-      padding: const EdgeInsets.all(58.0),
-      child: Container(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 66),
-          child: Text(
-            'RISEUP',
-            style: TextStyle(
-                height: 0.2,
-                fontSize: 40,
-                color: Color(0xff4C7360),
-                fontWeight: FontWeight.w600),
-          ),
-        ),
-      ),
+    var title3 = Container(
+      child: Padding(
+          padding: const EdgeInsets.only(top: 6, left: 220),
+          child: Image.asset('assets/images/headerSplash.png')),
     );
 
     return Directionality(
       textDirection: TextDirection.ltr,
       child: IntroductionScreen(
           pages: [
-            PageViewModel(
-              titleWidget: title1,
-              bodyWidget: body1,
-              decoration: getPageDecoration(),
-            ),
+            // PageViewModel(
+            //   titleWidget: title1,
+            //   bodyWidget: body1,
+            //   decoration: getPageDecoration(),
+            // ),
             PageViewModel(
               titleWidget: title2,
               bodyWidget: body2,
@@ -165,10 +107,9 @@ class OnBoardingPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    TextButton(
-                      child: Text('start') ,
-                      onPressed: () => Get.to(HomeScreen()
-                      ),
+                    ButtonWidget(
+                      text: 'ابدا',
+                      onClicked: () => Get.to(HomeScreen()),
                       // key: key!,
                     ),
                   ],
@@ -227,10 +168,47 @@ class OnBoardingPage extends StatelessWidget {
           fontSize: 20,
           fontWeight: FontWeight.w400,
         ),
-        descriptionPadding: EdgeInsets.all(16).copyWith(bottom: 0),
+        descriptionPadding: EdgeInsets.all(16).copyWith(bottom: 02),
         imagePadding: EdgeInsets.all(44),
         pageColor: Colors.white,
       );
 }
 
 // TextStyle(fontSize: 40, fontWeight: FontWeight.bold)
+class ButtonWidget extends StatelessWidget {
+  final String text;
+  final VoidCallback onClicked;
+
+  const ButtonWidget({
+    // required Key key,
+    required this.text,
+    required this.onClicked,
+  }) : super(key: null);
+
+  @override
+  Widget build(BuildContext context) => ElevatedButton(
+        style: ButtonStyle(
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(7.0),
+            // side: BorderSide(color: Colors.red)
+          )),
+          backgroundColor: MaterialStatePropertyAll<Color>(Color(0xff4C7360)),
+        ),
+        onPressed: onClicked,
+        // color: Theme.of(context).primaryColor,
+        // shape: StadiumBorder(),
+        // padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+        child: Container(
+          margin: EdgeInsets.fromLTRB(74, 12, 74, 12),
+          child: Text(
+            text,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 32,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      );
+}
