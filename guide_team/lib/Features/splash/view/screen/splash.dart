@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:guide_team/Features/chatFeature/chat/view/screen/chat_screen.dart';
 import 'package:guide_team/HomeScreen.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
@@ -109,7 +110,7 @@ class OnBoardingPage extends StatelessWidget {
                   children: [
                     ButtonWidget(
                       text: 'ابدا',
-                      onClicked: () => Get.to(HomeScreen()),
+                      onClicked: () => Get.to(ChatScreen()),
                       // key: key!,
                     ),
                   ],

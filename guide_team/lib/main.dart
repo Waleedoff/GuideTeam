@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:guide_team/Features/chatFeature/chat/view/screen/chat_screen.dart';
 import 'package:guide_team/Features/splash/view/screen/splash.dart';
 import 'package:guide_team/HomeScreen.dart';
 
